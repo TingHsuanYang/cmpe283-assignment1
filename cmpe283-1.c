@@ -166,7 +166,7 @@ void report_capability(struct capability_info* cap, uint8_t len, uint32_t lo, ui
  * Detects and prints VMX capabilities of this host's CPU.
  */
 void detect_vmx_features(void) {
-    uint32_t lo, hi;
+    uint32_t lo, hi, hasSecProc, hasTerProc;
 
     /* Pinbased controls */
     rdmsr(IA32_VMX_PINBASED_CTLS, lo, hi);
@@ -180,18 +180,31 @@ void detect_vmx_features(void) {
             (uint64_t)(lo | (uint64_t)hi << 32));
     report_capability(procbased_ctls, 21, lo, hi);
 
-    /* Secondary Processor based controls */
-    rdmsr(IA32_VMX_PROCBASED_CTLS2, lo, hi);
-    pr_info("Secondary Processor based: 0x%llx\n",
-            (uint64_t)(lo | (uint64_t)hi << 32));
-    report_capability(procbased_ctls2, 23, lo, hi);
+    // only if bit 63 of the IA32_VMX_PROCBASED_CTLS MSR is 1
+    hasSecProc = hi & (1 << 31);
 
-    /* Teritary Processor based controls */
-    // move to the third position, otherwise will have "unchecked MSR access error"
-    rdmsr(IA32_VMX_PROCBASED_CTLS3, lo, hi);
-    pr_info("Teritary Processor based MSR: 0x%llx\n",
-            (uint64_t)(lo | (uint64_t)hi << 32));
-    report_capability(procbased_ctls3, 4, lo, hi);
+    /* Secondary Processor based controls */
+    if (hasSecProc) {
+        rdmsr(IA32_VMX_PROCBASED_CTLS2, lo, hi);
+        pr_info("Secondary Processor based: 0x%llx\n",
+                (uint64_t)(lo | (uint64_t)hi << 32));
+        report_capability(procbased_ctls2, 23, lo, hi);
+    } else {
+        pr_info("Secondary processor-based controls not supported\n");
+    }
+
+    // only if bit 49 of the IA32_VMX_PROCBASED_CTLS MSR is 1
+    hasTerProc = lo & (1 << 17);
+
+    /* Tertiary Processor based controls */
+    if (hasTerProc) {
+        rdmsr(IA32_VMX_PROCBASED_CTLS3, lo, hi);
+        pr_info("Tertiary Processor based MSR: 0x%llx\n",
+                (uint64_t)(lo | (uint64_t)hi << 32));
+        report_capability(procbased_ctls3, 4, lo, hi);
+    } else {
+        pr_info("Tertiary processor-based controls not supported\n");
+    }
 
     /* Exit Controls */
     rdmsr(IA32_VMX_EXIT_CTLS, lo, hi);
