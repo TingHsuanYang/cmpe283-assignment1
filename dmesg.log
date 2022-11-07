@@ -842,3 +842,176 @@
 [11579.797100]   Load IA32_EFER: Can set=Yes, Can clear=Yes
 [11579.797100]   Load IA32_BNDCFGS: Can set=No, Can clear=Yes
 [11579.797101]   Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
+[34226.027102] kauditd_printk_skb: 1 callbacks suppressed
+[34226.027104] audit: type=1400 audit(1667842464.887:29): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/snapd/17336/usr/lib/snapd/snap-confine" pid=15083 comm="apparmor_parser"
+[34226.027311] audit: type=1400 audit(1667842464.887:30): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/snapd/17336/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=15083 comm="apparmor_parser"
+[34227.482903] audit: type=1400 audit(1667842466.343:31): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/snapd/17336/usr/lib/snapd/snap-confine" pid=15242 comm="apparmor_parser"
+[34227.525343] audit: type=1400 audit(1667842466.387:32): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/snapd/17336/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=15242 comm="apparmor_parser"
+[34227.529204] audit: type=1400 audit(1667842466.387:33): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.anthoscli" pid=15245 comm="apparmor_parser"
+[34227.529239] audit: type=1400 audit(1667842466.387:34): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.google-cloud-cli" pid=15244 comm="apparmor_parser"
+[34227.529523] audit: type=1400 audit(1667842466.391:35): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.gcloud" pid=15248 comm="apparmor_parser"
+[34227.529527] audit: type=1400 audit(1667842466.391:36): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.bq" pid=15246 comm="apparmor_parser"
+[34227.529557] audit: type=1400 audit(1667842466.391:37): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.docker-credential-gcloud" pid=15247 comm="apparmor_parser"
+[34227.529702] audit: type=1400 audit(1667842466.391:38): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.gsutil" pid=15249 comm="apparmor_parser"
+[34241.021312] kauditd_printk_skb: 1 callbacks suppressed
+[34241.021313] audit: type=1400 audit(1667842479.880:40): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.anthoscli" pid=15635 comm="apparmor_parser"
+[34241.021683] audit: type=1400 audit(1667842479.880:41): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.docker-credential-gcloud" pid=15637 comm="apparmor_parser"
+[34241.021708] audit: type=1400 audit(1667842479.880:42): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.gcloud" pid=15638 comm="apparmor_parser"
+[34241.021836] audit: type=1400 audit(1667842479.880:43): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.bq" pid=15636 comm="apparmor_parser"
+[34241.021840] audit: type=1400 audit(1667842479.880:44): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.kubectl" pid=15640 comm="apparmor_parser"
+[34241.021938] audit: type=1400 audit(1667842479.880:45): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.google-cloud-cli.gsutil" pid=15639 comm="apparmor_parser"
+[34241.024590] audit: type=1400 audit(1667842479.884:46): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.google-cloud-cli" pid=15642 comm="apparmor_parser"
+[44059.998325] CMPE 283 Assignment 1 Module Exits
+[44061.698861] CMPE 283 Assignment 1 Module Start
+[44061.698864] Pinbased Controls MSR: 0x3f00000016
+[44061.698865]   External Interrupt Exiting: Can set=Yes, Can clear=Yes
+[44061.698866]   NMI Exiting: Can set=Yes, Can clear=Yes
+[44061.698866]   Virtual NMIs: Can set=Yes, Can clear=Yes
+[44061.698867]   Activate VMX Preemption Timer: Can set=No, Can clear=Yes
+[44061.698867]   Process Posted Interrupts: Can set=No, Can clear=Yes
+[44061.698869] Primary Processor based Controls MSR: 0xf7b9fffe0401e172
+[44061.698870]   Interrupt-window Exiting: Can set=Yes, Can clear=Yes
+[44061.698870]   Use TSC Offsetting: Can set=Yes, Can clear=Yes
+[44061.698871]   HLT exiting: Can set=Yes, Can clear=Yes
+[44061.698871]   INVLPG exiting: Can set=Yes, Can clear=Yes
+[44061.698871]   MWAIT exiting: Can set=Yes, Can clear=Yes
+[44061.698872]   RDPMC exiting: Can set=Yes, Can clear=Yes
+[44061.698872]   RDTSC exiting: Can set=Yes, Can clear=Yes
+[44061.698873]   CR3-load exiting: Can set=Yes, Can clear=No
+[44061.698873]   CR3-store exiting: Can set=Yes, Can clear=No
+[44061.698874]   CR8-load exiting: Can set=Yes, Can clear=Yes
+[44061.698875]   CR8-store exiting: Can set=Yes, Can clear=Yes
+[44061.698875]   Use TPR shadow: Can set=Yes, Can clear=Yes
+[44061.698876]   NMI-window exiting: Can set=No, Can clear=Yes
+[44061.698876]   MOV-DR exiting: Can set=Yes, Can clear=Yes
+[44061.698877]   Unconditional I/O exiting: Can set=Yes, Can clear=Yes
+[44061.698877]   Use I/O bitmaps: Can set=Yes, Can clear=Yes
+[44061.698878]   Monitor trap flag: Can set=No, Can clear=Yes
+[44061.698878]   Use MSR bitmaps: Can set=Yes, Can clear=Yes
+[44061.698879]   MONITOR exiting: Can set=Yes, Can clear=Yes
+[44061.698879]   PAUSE exiting: Can set=Yes, Can clear=Yes
+[44061.698880]   Activate secondary controls: Can set=Yes, Can clear=Yes
+[44061.698881] Secondary Processor based: 0x51ff00000000
+[44061.698882]   Virtualize APIC accesses: Can set=Yes, Can clear=Yes
+[44061.698882]   Enable EPT: Can set=Yes, Can clear=Yes
+[44061.698883]   Descriptor-table exiting: Can set=Yes, Can clear=Yes
+[44061.698883]   Enable RDTSCP: Can set=Yes, Can clear=Yes
+[44061.698884]   Virtualize x2APIC mode: Can set=Yes, Can clear=Yes
+[44061.698884]   Enable VPID: Can set=Yes, Can clear=Yes
+[44061.698885]   WBINVD exiting: Can set=Yes, Can clear=Yes
+[44061.698885]   Unrestricted guest: Can set=Yes, Can clear=Yes
+[44061.698885]   APIC-register virtualization: Can set=Yes, Can clear=Yes
+[44061.698886]   Virtual-interrupt delivery: Can set=No, Can clear=Yes
+[44061.698886]   Pause-loop exiting: Can set=No, Can clear=Yes
+[44061.698887]   RDRAND exiting: Can set=No, Can clear=Yes
+[44061.698887]   Enable INVPCID: Can set=Yes, Can clear=Yes
+[44061.698888]   Enable VM functions: Can set=No, Can clear=Yes
+[44061.698888]   VMCS shadowing: Can set=Yes, Can clear=Yes
+[44061.698889]   Enable ENCLS exiting: Can set=No, Can clear=Yes
+[44061.698889]   RDSEED exiting: Can set=No, Can clear=Yes
+[44061.698890]   Enable PML: Can set=No, Can clear=Yes
+[44061.698890]   EPT-violation #VE: Can set=No, Can clear=Yes
+[44061.698891]   Conceal VMX non root operation from Intel PT: Can set=No, Can clear=Yes
+[44061.698891]   Enable XSAVES/XRSTORS: Can set=No, Can clear=Yes
+[44061.698892]   Mode-based execute control for EPT.: Can set=No, Can clear=Yes
+[44061.698892]   Use TSC scaling: Can set=No, Can clear=Yes
+[44061.698892] Tertiary processor-based controls not supported
+[44061.698894] Exit Controls MSR: 0x3fefff00036dff
+[44061.698894]   Save debug controls: Can set=Yes, Can clear=No
+[44061.698895]   Host address space size: Can set=Yes, Can clear=Yes
+[44061.698895]   Load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[44061.698896]   Acknowledge Interrupt on exit: Can set=Yes, Can clear=Yes
+[44061.698896]   Save IA32_PAT: Can set=Yes, Can clear=Yes
+[44061.698897]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[44061.698897]   Save IA32_EFER: Can set=Yes, Can clear=Yes
+[44061.698898]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[44061.698898]   Save VMX-preemption timer value: Can set=No, Can clear=Yes
+[44061.698899]   Clear IA32_BNDCFGS: Can set=No, Can clear=Yes
+[44061.698899]   Conceal VM exits from Intel PT: Can set=No, Can clear=Yes
+[44061.698901] Entry Controls MSR: 0xd3ff000011ff
+[44061.698901]   Load debug controls: Can set=Yes, Can clear=No
+[44061.698902]   IA-32e mode guest: Can set=Yes, Can clear=Yes
+[44061.698902]   Entry to SMM: Can set=No, Can clear=Yes
+[44061.698902]   Deactivate dual-monito treatment: Can set=No, Can clear=Yes
+[44061.698903]   load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[44061.698903]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[44061.698904]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[44061.698904]   Load IA32_BNDCFGS: Can set=No, Can clear=Yes
+[44061.698905]   Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
+[45058.166220] CMPE 283 Assignment 1 Module Exits
+[45060.648159] CMPE 283 Assignment 1 Module Start
+[45060.648162] Pinbased Controls MSR: 0x3f00000016
+[45060.648163]   External Interrupt Exiting: Can set=Yes, Can clear=Yes
+[45060.648163]   NMI Exiting: Can set=Yes, Can clear=Yes
+[45060.648164]   Virtual NMIs: Can set=Yes, Can clear=Yes
+[45060.648165]   Activate VMX Preemption Timer: Can set=No, Can clear=Yes
+[45060.648165]   Process Posted Interrupts: Can set=No, Can clear=Yes
+[45060.648167] Primary Processor based Controls MSR: 0xf7b9fffe0401e172
+[45060.648168]   Interrupt-window Exiting: Can set=Yes, Can clear=Yes
+[45060.648168]   Use TSC Offsetting: Can set=Yes, Can clear=Yes
+[45060.648169]   HLT exiting: Can set=Yes, Can clear=Yes
+[45060.648169]   INVLPG exiting: Can set=Yes, Can clear=Yes
+[45060.648170]   MWAIT exiting: Can set=Yes, Can clear=Yes
+[45060.648170]   RDPMC exiting: Can set=Yes, Can clear=Yes
+[45060.648171]   RDTSC exiting: Can set=Yes, Can clear=Yes
+[45060.648171]   CR3-load exiting: Can set=Yes, Can clear=No
+[45060.648172]   CR3-store exiting: Can set=Yes, Can clear=No
+[45060.648172]   CR8-load exiting: Can set=Yes, Can clear=Yes
+[45060.648173]   CR8-store exiting: Can set=Yes, Can clear=Yes
+[45060.648173]   Use TPR shadow: Can set=Yes, Can clear=Yes
+[45060.648174]   NMI-window exiting: Can set=No, Can clear=Yes
+[45060.648174]   MOV-DR exiting: Can set=Yes, Can clear=Yes
+[45060.648175]   Unconditional I/O exiting: Can set=Yes, Can clear=Yes
+[45060.648175]   Use I/O bitmaps: Can set=Yes, Can clear=Yes
+[45060.648175]   Monitor trap flag: Can set=No, Can clear=Yes
+[45060.648176]   Use MSR bitmaps: Can set=Yes, Can clear=Yes
+[45060.648176]   MONITOR exiting: Can set=Yes, Can clear=Yes
+[45060.648177]   PAUSE exiting: Can set=Yes, Can clear=Yes
+[45060.648177]   Activate secondary controls: Can set=Yes, Can clear=Yes
+[45060.648179] Secondary Processor based: 0x51ff00000000
+[45060.648179]   Virtualize APIC accesses: Can set=Yes, Can clear=Yes
+[45060.648180]   Enable EPT: Can set=Yes, Can clear=Yes
+[45060.648180]   Descriptor-table exiting: Can set=Yes, Can clear=Yes
+[45060.648181]   Enable RDTSCP: Can set=Yes, Can clear=Yes
+[45060.648181]   Virtualize x2APIC mode: Can set=Yes, Can clear=Yes
+[45060.648182]   Enable VPID: Can set=Yes, Can clear=Yes
+[45060.648182]   WBINVD exiting: Can set=Yes, Can clear=Yes
+[45060.648183]   Unrestricted guest: Can set=Yes, Can clear=Yes
+[45060.648183]   APIC-register virtualization: Can set=Yes, Can clear=Yes
+[45060.648184]   Virtual-interrupt delivery: Can set=No, Can clear=Yes
+[45060.648184]   Pause-loop exiting: Can set=No, Can clear=Yes
+[45060.648185]   RDRAND exiting: Can set=No, Can clear=Yes
+[45060.648185]   Enable INVPCID: Can set=Yes, Can clear=Yes
+[45060.648185]   Enable VM functions: Can set=No, Can clear=Yes
+[45060.648186]   VMCS shadowing: Can set=Yes, Can clear=Yes
+[45060.648186]   Enable ENCLS exiting: Can set=No, Can clear=Yes
+[45060.648187]   RDSEED exiting: Can set=No, Can clear=Yes
+[45060.648187]   Enable PML: Can set=No, Can clear=Yes
+[45060.648188]   EPT-violation #VE: Can set=No, Can clear=Yes
+[45060.648188]   Conceal VMX non root operation from Intel PT: Can set=No, Can clear=Yes
+[45060.648189]   Enable XSAVES/XRSTORS: Can set=No, Can clear=Yes
+[45060.648189]   Mode-based execute control for EPT.: Can set=No, Can clear=Yes
+[45060.648190]   Use TSC scaling: Can set=No, Can clear=Yes
+[45060.648190] Tertiary processor-based controls not supported
+[45060.648192] Exit Controls MSR: 0x3fefff00036dff
+[45060.648192]   Save debug controls: Can set=Yes, Can clear=No
+[45060.648193]   Host address space size: Can set=Yes, Can clear=Yes
+[45060.648193]   Load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[45060.648194]   Acknowledge Interrupt on exit: Can set=Yes, Can clear=Yes
+[45060.648194]   Save IA32_PAT: Can set=Yes, Can clear=Yes
+[45060.648194]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[45060.648195]   Save IA32_EFER: Can set=Yes, Can clear=Yes
+[45060.648195]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[45060.648196]   Save VMX-preemption timer value: Can set=No, Can clear=Yes
+[45060.648196]   Clear IA32_BNDCFGS: Can set=No, Can clear=Yes
+[45060.648197]   Conceal VM exits from Intel PT: Can set=No, Can clear=Yes
+[45060.648198] Entry Controls MSR: 0xd3ff000011ff
+[45060.648199]   Load debug controls: Can set=Yes, Can clear=No
+[45060.648200]   IA-32e mode guest: Can set=Yes, Can clear=Yes
+[45060.648200]   Entry to SMM: Can set=No, Can clear=Yes
+[45060.648201]   Deactivate dual-monito treatment: Can set=No, Can clear=Yes
+[45060.648201]   load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[45060.648202]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[45060.648202]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[45060.648203]   Load IA32_BNDCFGS: Can set=No, Can clear=Yes
+[45060.648203]   Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
