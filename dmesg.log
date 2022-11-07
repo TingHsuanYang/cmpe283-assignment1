@@ -1,0 +1,844 @@
+[    0.000000] Linux version 5.4.0-1092-gcp (buildd@lcy02-amd64-012) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #101~18.04.1-Ubuntu SMP Mon Oct 17 18:29:06 UTC 2022 (Ubuntu 5.4.0-1092.101~18.04.1-gcp 5.4.210)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.4.0-1092-gcp root=LABEL=cloudimg-rootfs ro console=ttyS0
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: xstate_offset[5]:  832, xstate_sizes[5]:   64
+[    0.000000] x86/fpu: xstate_offset[6]:  896, xstate_sizes[6]:  512
+[    0.000000] x86/fpu: xstate_offset[7]: 1408, xstate_sizes[7]: 1024
+[    0.000000] x86/fpu: Enabled xstate features 0xe7, context size is 2432 bytes, using 'compacted' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x0000000000000fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000001000-0x0000000000054fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000000055000-0x000000000005ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000060000-0x0000000000097fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000000098000-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bf8eefff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000bf8ef000-0x00000000bfb6efff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000bfb6f000-0x00000000bfb7efff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000bfb7f000-0x00000000bfbfefff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x00000000bfbff000-0x00000000bffdffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000bffe0000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000083fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] efi: EFI v2.70 by EDK II
+[    0.000000] efi:  TPMFinalLog=0xbfbf7000  ACPI=0xbfb7e000  ACPI 2.0=0xbfb7e014  SMBIOS=0xbf9cc000  MEMATTR=0xbe3aa298  MOKvar=0xbe396000  TPMEventLog=0xbe38d018 
+[    0.000000] secureboot: Secure boot disabled
+[    0.000000] SMBIOS 2.4 present.
+[    0.000000] DMI: Google Google Compute Engine/Google Compute Engine, BIOS Google 10/11/2022
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 1a7c01001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 11883384544 cycles
+[    0.000008] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000019] tsc: Detected 2800.282 MHz processor
+[    0.000099] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000100] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000106] last_pfn = 0x840000 max_arch_pfn = 0x400000000
+[    0.000147] MTRR default type: write-back
+[    0.000148] MTRR fixed ranges enabled:
+[    0.000149]   00000-9FFFF write-back
+[    0.000150]   A0000-FFFFF uncachable
+[    0.000151] MTRR variable ranges enabled:
+[    0.000152]   0 base 0000C0000000 mask 3FFFC0000000 uncachable
+[    0.000152]   1 disabled
+[    0.000152]   2 disabled
+[    0.000153]   3 disabled
+[    0.000153]   4 disabled
+[    0.000153]   5 disabled
+[    0.000154]   6 disabled
+[    0.000154]   7 disabled
+[    0.000169] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.000184] last_pfn = 0xbffe0 max_arch_pfn = 0x400000000
+[    0.011860] e820: update [mem 0xbe396000-0xbe396fff] usable ==> reserved
+[    0.011905] check: Scanning 1 areas for low memory corruption
+[    0.011945] Using GB pages for direct mapping
+[    0.012176] secureboot: Secure boot disabled
+[    0.012177] RAMDISK: [mem 0x3ab9c000-0x3d089fff]
+[    0.012185] ACPI: Early table checksum verification disabled
+[    0.012189] ACPI: RSDP 0x00000000BFB7E014 000024 (v02 Google)
+[    0.012192] ACPI: XSDT 0x00000000BFB7D0E8 00005C (v01 Google GOOGFACP 00000001      01000013)
+[    0.012198] ACPI: FACP 0x00000000BFB78000 0000F4 (v02 Google GOOGFACP 00000001 GOOG 00000001)
+[    0.012203] ACPI: DSDT 0x00000000BFB79000 001A64 (v01 Google GOOGDSDT 00000001 GOOG 00000001)
+[    0.012206] ACPI: FACS 0x00000000BFBF2000 000040
+[    0.012209] ACPI: SSDT 0x00000000BFB7C000 000316 (v02 GOOGLE Tpm2Tabl 00001000 INTL 20211217)
+[    0.012212] ACPI: TPM2 0x00000000BFB7B000 000034 (v04 GOOGLE          00000001 GOOG 00000001)
+[    0.012215] ACPI: SRAT 0x00000000BFB77000 000128 (v03 Google GOOGSRAT 00000001 GOOG 00000001)
+[    0.012218] ACPI: APIC 0x00000000BFB76000 0000A6 (v05 Google GOOGAPIC 00000001 GOOG 00000001)
+[    0.012221] ACPI: SSDT 0x00000000BFB75000 000BC6 (v01 Google GOOGSSDT 00000001 GOOG 00000001)
+[    0.012224] ACPI: WAET 0x00000000BFB74000 000028 (v01 Google GOOGWAET 00000001 GOOG 00000001)
+[    0.012226] ACPI: Reserving FACP table memory at [mem 0xbfb78000-0xbfb780f3]
+[    0.012227] ACPI: Reserving DSDT table memory at [mem 0xbfb79000-0xbfb7aa63]
+[    0.012228] ACPI: Reserving FACS table memory at [mem 0xbfbf2000-0xbfbf203f]
+[    0.012229] ACPI: Reserving SSDT table memory at [mem 0xbfb7c000-0xbfb7c315]
+[    0.012230] ACPI: Reserving TPM2 table memory at [mem 0xbfb7b000-0xbfb7b033]
+[    0.012230] ACPI: Reserving SRAT table memory at [mem 0xbfb77000-0xbfb77127]
+[    0.012231] ACPI: Reserving APIC table memory at [mem 0xbfb76000-0xbfb760a5]
+[    0.012232] ACPI: Reserving SSDT table memory at [mem 0xbfb75000-0xbfb75bc5]
+[    0.012233] ACPI: Reserving WAET table memory at [mem 0xbfb74000-0xbfb74027]
+[    0.012253] ACPI: Local APIC address 0xfee00000
+[    0.012390] SRAT: PXM 0 -> APIC 0x00 -> Node 0
+[    0.012392] SRAT: PXM 0 -> APIC 0x01 -> Node 0
+[    0.012393] SRAT: PXM 0 -> APIC 0x02 -> Node 0
+[    0.012393] SRAT: PXM 0 -> APIC 0x03 -> Node 0
+[    0.012394] SRAT: PXM 0 -> APIC 0x04 -> Node 0
+[    0.012395] SRAT: PXM 0 -> APIC 0x05 -> Node 0
+[    0.012395] SRAT: PXM 0 -> APIC 0x06 -> Node 0
+[    0.012396] SRAT: PXM 0 -> APIC 0x07 -> Node 0
+[    0.012399] ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0x0009ffff]
+[    0.012400] ACPI: SRAT: Node 0 PXM 0 [mem 0x00100000-0xbfffffff]
+[    0.012401] ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x83fffffff]
+[    0.012403] NUMA: Node 0 [mem 0x00000000-0x0009ffff] + [mem 0x00100000-0xbfffffff] -> [mem 0x00000000-0xbfffffff]
+[    0.012404] NUMA: Node 0 [mem 0x00000000-0xbfffffff] + [mem 0x100000000-0x83fffffff] -> [mem 0x00000000-0x83fffffff]
+[    0.012413] NODE_DATA(0) allocated [mem 0x83ffd5000-0x83fffffff]
+[    0.013491] Zone ranges:
+[    0.013493]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.013494]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.013495]   Normal   [mem 0x0000000100000000-0x000000083fffffff]
+[    0.013496]   Device   empty
+[    0.013497] Movable zone start for each node
+[    0.013499] Early memory node ranges
+[    0.013500]   node   0: [mem 0x0000000000001000-0x0000000000054fff]
+[    0.013501]   node   0: [mem 0x0000000000060000-0x0000000000097fff]
+[    0.013502]   node   0: [mem 0x0000000000100000-0x00000000bf8eefff]
+[    0.013503]   node   0: [mem 0x00000000bfbff000-0x00000000bffdffff]
+[    0.013503]   node   0: [mem 0x0000000100000000-0x000000083fffffff]
+[    0.013507] Initmem setup node 0 [mem 0x0000000000001000-0x000000083fffffff]
+[    0.013509] On node 0 totalpages: 8387676
+[    0.013510]   DMA zone: 64 pages used for memmap
+[    0.013510]   DMA zone: 3105 pages reserved
+[    0.013511]   DMA zone: 3980 pages, LIFO batch:0
+[    0.014128]   DMA zone: 28788 pages in unavailable ranges
+[    0.014130]   DMA32 zone: 12212 pages used for memmap
+[    0.014131]   DMA32 zone: 781520 pages, LIFO batch:63
+[    0.028069]   DMA32 zone: 816 pages in unavailable ranges
+[    0.028074]   Normal zone: 118784 pages used for memmap
+[    0.028075]   Normal zone: 7602176 pages, LIFO batch:63
+[    0.166790] ACPI: PM-Timer IO Port: 0xb008
+[    0.166796] ACPI: Local APIC address 0xfee00000
+[    0.166816] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.166873] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.166877] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.166878] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.166879] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.166880] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.166882] ACPI: IRQ5 used by override.
+[    0.166883] ACPI: IRQ9 used by override.
+[    0.166883] ACPI: IRQ10 used by override.
+[    0.166884] ACPI: IRQ11 used by override.
+[    0.166885] Using ACPI (MADT) for SMP configuration information
+[    0.166889] smpboot: Allowing 8 CPUs, 0 hotplug CPUs
+[    0.166920] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.166922] PM: Registered nosave memory: [mem 0x00055000-0x0005ffff]
+[    0.166924] PM: Registered nosave memory: [mem 0x00098000-0x0009ffff]
+[    0.166924] PM: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.166926] PM: Registered nosave memory: [mem 0xbe396000-0xbe396fff]
+[    0.166927] PM: Registered nosave memory: [mem 0xbf8ef000-0xbfb6efff]
+[    0.166928] PM: Registered nosave memory: [mem 0xbfb6f000-0xbfb7efff]
+[    0.166928] PM: Registered nosave memory: [mem 0xbfb7f000-0xbfbfefff]
+[    0.166930] PM: Registered nosave memory: [mem 0xbffe0000-0xbfffffff]
+[    0.166930] PM: Registered nosave memory: [mem 0xc0000000-0xffffffff]
+[    0.166932] [mem 0xc0000000-0xffffffff] available for PCI devices
+[    0.166934] Booting paravirtualized kernel on KVM
+[    0.166941] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.166947] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:8 nr_cpu_ids:8 nr_node_ids:1
+[    0.167656] percpu: Embedded 60 pages/cpu s208896 r8192 d28672 u262144
+[    0.167662] pcpu-alloc: s208896 r8192 d28672 u262144 alloc=1*2097152
+[    0.167663] pcpu-alloc: [0] 0 1 2 3 4 5 6 7 
+[    0.167691] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.167699] Built 1 zonelists, mobility grouping on.  Total pages: 8253511
+[    0.167700] Policy zone: Normal
+[    0.167702] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.0-1092-gcp root=LABEL=cloudimg-rootfs ro console=ttyS0
+[    0.176141] Dentry cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+[    0.180316] Inode-cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.180441] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.189812] Calgary: detecting Calgary via BIOS EBDA area
+[    0.189815] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.259577] Memory: 32796916K/33550704K available (14339K kernel code, 2393K rwdata, 9596K rodata, 2748K init, 4960K bss, 753788K reserved, 0K cma-reserved)
+[    0.260292] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.260319] ftrace: allocating 44987 entries in 176 pages
+[    0.277290] rcu: Hierarchical RCU implementation.
+[    0.277293] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=8.
+[    0.277295] 	Tasks RCU enabled.
+[    0.277296] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.277297] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.279719] NR_IRQS: 524544, nr_irqs: 488, preallocated irqs: 16
+[    0.279900] random: crng init done
+[    0.279927] Console: colour dummy device 80x25
+[    0.405757] printk: console [ttyS0] enabled
+[    0.406435] ACPI: Core revision 20190816
+[    0.407098] APIC: Switch to symmetric I/O mode setup
+[    0.408171] x2apic enabled
+[    0.410604] Switched APIC routing to physical x2apic.
+[    0.414723] ..TIMER: vector=0x30 apic1=0 pin1=0 apic2=-1 pin2=-1
+[    0.415793] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x285d4b5dad0, max_idle_ns: 440795275111 ns
+[    0.417284] Calibrating delay loop (skipped) preset value.. 5600.56 BogoMIPS (lpj=11201128)
+[    0.418390] pid_max: default: 32768 minimum: 301
+[    0.422858] LSM: Security Framework initializing
+[    0.423501] Yama: becoming mindful.
+[    0.424023] AppArmor: AppArmor initialized
+[    0.425139] Mount-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.425348] Mountpoint-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.426519] *** VALIDATE tmpfs ***
+[    0.427125] *** VALIDATE proc ***
+[    0.427656] *** VALIDATE cgroup1 ***
+[    0.428148] *** VALIDATE cgroup2 ***
+[    0.429617] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.430344] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.431196] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.432344] Spectre V2 : Mitigation: Enhanced IBRS
+[    0.432990] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.433282] Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+[    0.434299] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.435414] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+[    0.437289] MDS: Mitigation: Clear CPU buffers
+[    0.437890] TAA: Mitigation: Clear CPU buffers
+[    0.438493] MMIO Stale Data: Vulnerable: Clear CPU buffers attempted, no microcode
+[    0.439746] Freeing SMP alternatives memory: 40K
+[    0.550978] smpboot: CPU0: Intel(R) Xeon(R) CPU @ 2.80GHz (family: 0x6, model: 0x55, stepping: 0x7)
+[    0.552441] Performance Events: unsupported p6 CPU model 85 no PMU driver, software events only.
+[    0.553279] rcu: Hierarchical SRCU implementation.
+[    0.553602] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.554531] smp: Bringing up secondary CPUs ...
+[    0.555262] x86: Booting SMP configuration:
+[    0.555859] .... node  #0, CPUs:      #1
+[    0.133387] kvm-clock: cpu 1, msr 1a7c01041, secondary cpu clock
+[    0.557380]  #2
+[    0.133387] kvm-clock: cpu 2, msr 1a7c01081, secondary cpu clock
+[    0.558939]  #3
+[    0.133387] kvm-clock: cpu 3, msr 1a7c010c1, secondary cpu clock
+[    0.558939]  #4
+[    0.133387] kvm-clock: cpu 4, msr 1a7c01101, secondary cpu clock
+[    0.562110] MDS CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html for more details.
+[    0.565286] TAA CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/tsx_async_abort.html for more details.
+[    0.567339] MMIO Stale Data CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/processor_mmio_stale_data.html for more details.
+[    0.569443]  #5
+[    0.133387] kvm-clock: cpu 5, msr 1a7c01141, secondary cpu clock
+[    0.570331]  #6
+[    0.133387] kvm-clock: cpu 6, msr 1a7c01181, secondary cpu clock
+[    0.570953]  #7
+[    0.133387] kvm-clock: cpu 7, msr 1a7c011c1, secondary cpu clock
+[    0.573971] smp: Brought up 1 node, 8 CPUs
+[    0.574732] smpboot: Max logical packages: 1
+[    0.575332] smpboot: Total of 8 processors activated (44804.51 BogoMIPS)
+[    0.578919] devtmpfs: initialized
+[    0.578919] x86/mm: Memory block size: 128MB
+[    0.583876] PM: Registering ACPI NVS region [mem 0xbfb7f000-0xbfbfefff] (524288 bytes)
+[    0.585339] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.586668] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.587663] pinctrl core: initialized pinctrl subsystem
+[    0.588499] PM: RTC time: 08:03:55, date: 2022-11-07
+[    0.589502] NET: Registered protocol family 16
+[    0.590258] audit: initializing netlink subsys (disabled)
+[    0.591022] audit: type=2000 audit(1667808235.867:1): state=initialized audit_enabled=0 res=1
+[    0.591022] EISA bus registered
+[    0.591047] cpuidle: using governor ladder
+[    0.593287] cpuidle: using governor menu
+[    0.593870] ACPI: bus type PCI registered
+[    0.594435] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.595431] PCI: Using configuration type 1 for base access
+[    0.599906] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.599906] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.601830] ACPI: Added _OSI(Module Device)
+[    0.605283] ACPI: Added _OSI(Processor Device)
+[    0.605885] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.606539] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.607276] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.607878] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.608591] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.610779] ACPI: 3 ACPI AML tables successfully acquired and loaded
+[    0.612856] ACPI: Interpreter enabled
+[    0.613299] ACPI: (supports S0 S3 S4 S5)
+[    0.613836] ACPI: Using IOAPIC for interrupt routing
+[    0.614528] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.615925] ACPI: Enabled 16 GPEs in block 00 to 0F
+[    0.620197] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.621069] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.621294] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.623516] PCI host bridge to bus 0000:00
+[    0.624076] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.625283] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.626269] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.627261] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfefff window]
+[    0.628252] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.629318] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.633727] pci 0000:00:01.0: [8086:7110] type 00 class 0x060100
+[    0.650688] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+[    0.671538] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[    0.673496] pci 0000:00:03.0: [1af4:1004] type 00 class 0x000000
+[    0.680695] pci 0000:00:03.0: reg 0x10: [io  0xc040-0xc07f]
+[    0.686533] pci 0000:00:03.0: reg 0x14: [mem 0xc0001000-0xc000107f]
+[    0.702899] pci 0000:00:04.0: [1af4:1000] type 00 class 0x020000
+[    0.710753] pci 0000:00:04.0: reg 0x10: [io  0xc000-0xc03f]
+[    0.717293] pci 0000:00:04.0: reg 0x14: [mem 0xc0000000-0xc00001ff]
+[    0.736543] pci 0000:00:05.0: [1af4:1005] type 00 class 0x00ff00
+[    0.744799] pci 0000:00:05.0: reg 0x10: [io  0xc080-0xc09f]
+[    0.750385] pci 0000:00:05.0: reg 0x14: [mem 0xc0002000-0xc000203f]
+[    0.773083] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+[    0.775261] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+[    0.777375] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+[    0.781381] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+[    0.783154] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+[    0.785288] iommu: Default domain type: Translated 
+[    0.786124] SCSI subsystem initialized
+[    0.786651] libata version 3.00 loaded.
+[    0.786651] vgaarb: loaded
+[    0.786651] ACPI: bus type USB registered
+[    0.786651] usbcore: registered new interface driver usbfs
+[    0.787023] usbcore: registered new interface driver hub
+[    0.787787] usbcore: registered new device driver usb
+[    0.789312] pps_core: LinuxPPS API ver. 1 registered
+[    0.790004] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.791223] PTP clock support registered
+[    0.791799] EDAC MC: Ver: 3.0.0
+[    0.791799] Registered efivars operations
+[    0.793324] PCI: Using ACPI for IRQ routing
+[    0.794195] PCI: pci_cache_line_size set to 64 bytes
+[    0.794273] e820: reserve RAM buffer [mem 0x00055000-0x0005ffff]
+[    0.794274] e820: reserve RAM buffer [mem 0x00098000-0x0009ffff]
+[    0.794275] e820: reserve RAM buffer [mem 0xbe396000-0xbfffffff]
+[    0.794276] e820: reserve RAM buffer [mem 0xbf8ef000-0xbfffffff]
+[    0.794277] e820: reserve RAM buffer [mem 0xbffe0000-0xbfffffff]
+[    0.794381] NetLabel: Initializing
+[    0.795029] NetLabel:  domain hash size = 128
+[    0.795619] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.796405] NetLabel:  unlabeled traffic allowed by default
+[    0.797441] clocksource: Switched to clocksource kvm-clock
+[    0.810633] *** VALIDATE bpf ***
+[    0.811202] VFS: Disk quotas dquot_6.6.0
+[    0.811774] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.812724] *** VALIDATE ramfs ***
+[    0.813195] *** VALIDATE hugetlbfs ***
+[    0.813884] AppArmor: AppArmor Filesystem Enabled
+[    0.814547] pnp: PnP ACPI init
+[    0.815035] pnp 00:00: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.815108] pnp 00:01: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.815147] pnp 00:02: Plug and Play ACPI device, IDs PNP0f13 (active)
+[    0.815194] pnp 00:03: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.815237] pnp 00:04: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.815274] pnp 00:05: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.815311] pnp 00:06: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.815496] pnp: PnP ACPI: found 7 devices
+[    0.817947] thermal_sys: Registered thermal governor 'fair_share'
+[    0.817947] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.818781] thermal_sys: Registered thermal governor 'step_wise'
+[    0.819583] thermal_sys: Registered thermal governor 'user_space'
+[    0.820420] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.825843] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.828127] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.829051] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.829908] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.830859] pci_bus 0000:00: resource 7 [mem 0xc0000000-0xfebfefff window]
+[    0.831919] NET: Registered protocol family 2
+[    0.833189] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.836201] tcp_listen_portaddr_hash hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    0.838159] TCP established hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.839668] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[    0.840749] TCP: Hash tables configured (established 262144 bind 65536)
+[    0.842236] UDP hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    0.843295] UDP-Lite hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    0.844491] NET: Registered protocol family 1
+[    0.845144] NET: Registered protocol family 44
+[    0.845820] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.846675] PCI: CLS 0 bytes, default 64
+[    0.847283] Trying to unpack rootfs image as initramfs...
+[    1.368253] Freeing initrd memory: 37816K
+[    1.369003] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.369974] software IO TLB: mapped [mem 0xb7ff7000-0xbbff7000] (64MB)
+[    1.370984] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x285d4b5dad0, max_idle_ns: 440795275111 ns
+[    1.372371] clocksource: Switched to clocksource tsc
+[    1.373092] check: Scanning for low memory corruption every 60 seconds
+[    1.374458] Initialise system trusted keyrings
+[    1.375105] Key type blacklist registered
+[    1.375784] workingset: timestamp_bits=36 max_order=23 bucket_order=0
+[    1.377637] zbud: loaded
+[    1.378271] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.379341] fuse: init (API version 7.31)
+[    1.379904] *** VALIDATE fuse ***
+[    1.380362] *** VALIDATE fuse ***
+[    1.380940] Platform Keyring initialized
+[    1.383938] Key type asymmetric registered
+[    1.384577] Asymmetric key parser 'x509' registered
+[    1.385241] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    1.386324] io scheduler mq-deadline registered
+[    1.387259] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    1.388195] intel_idle: Please enable MWAIT in BIOS SETUP
+[    1.388278] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.389300] ACPI: Power Button [PWRF]
+[    1.389846] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    1.390907] ACPI: Sleep Button [SLPF]
+[    1.394049] PCI Interrupt Link [LNKC] enabled at IRQ 11
+[    1.394872] virtio-pci 0000:00:03.0: virtio_pci: leaving for legacy driver
+[    1.399979] PCI Interrupt Link [LNKD] enabled at IRQ 10
+[    1.400768] virtio-pci 0000:00:04.0: virtio_pci: leaving for legacy driver
+[    1.405969] PCI Interrupt Link [LNKA] enabled at IRQ 10
+[    1.406788] virtio-pci 0000:00:05.0: virtio_pci: leaving for legacy driver
+[    1.410118] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    1.432096] 00:03: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    1.454084] 00:04: ttyS1 at I/O 0x2f8 (irq = 3, base_baud = 115200) is a 16550A
+[    1.476211] 00:05: ttyS2 at I/O 0x3e8 (irq = 6, base_baud = 115200) is a 16550A
+[    1.498196] 00:06: ttyS3 at I/O 0x2e8 (irq = 7, base_baud = 115200) is a 16550A
+[    1.500368] Linux agpgart interface v0.103
+[    1.502268] tpm_tis MSFT0101:00: 2.0 TPM (device-id 0x9009, rev-id 0)
+[    1.641367] loop: module loaded
+[    1.651140] scsi host0: Virtio SCSI HBA
+[    1.656088] scsi 0:0:1:0: Direct-Access     Google   PersistentDisk   1    PQ: 0 ANSI: 6
+[    1.656605] tun: Universal TUN/TAP device driver, 1.6
+[    1.657532] PPP generic driver version 2.4.2
+[    1.658202] VFIO - User Level meta-driver version: 0.3
+[    1.658880] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.659617] ehci-pci: EHCI PCI platform driver
+[    1.660145] ehci-platform: EHCI generic platform driver
+[    1.660801] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.661498] ohci-pci: OHCI PCI platform driver
+[    1.661944] ohci-platform: OHCI generic platform driver
+[    1.663094] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.663829] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    1.664785] i8042: Warning: Keylock active
+[    1.667231] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.667863] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.668696] mousedev: PS/2 mouse device common for all mice
+[    1.669543] rtc_cmos 00:00: RTC can wake from S4
+[    1.670959] rtc_cmos 00:00: registered as rtc0
+[    1.671203] scsi 0:0:1:0: Attached scsi generic sg0 type 0
+[    1.671534] sd 0:0:1:0: [sda] 209715200 512-byte logical blocks: (107 GB/100 GiB)
+[    1.671535] sd 0:0:1:0: [sda] 4096-byte physical blocks
+[    1.671576] sd 0:0:1:0: [sda] Write Protect is off
+[    1.671577] sd 0:0:1:0: [sda] Mode Sense: 1f 00 00 08
+[    1.671642] sd 0:0:1:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.671728] rtc_cmos 00:00: alarms up to one day, 114 bytes nvram
+[    1.675786] i2c /dev entries driver
+[    1.676218] device-mapper: uevent: version 1.0.3
+[    1.676896] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[    1.677972] platform eisa.0: Probing EISA bus 0
+[    1.678514] platform eisa.0: EISA: Cannot allocate resource for mainboard
+[    1.679295] platform eisa.0: Cannot allocate resource for EISA slot 1
+[    1.679910] GPT:Primary header thinks Alt. header is not at the end of the disk.
+[    1.680082] platform eisa.0: Cannot allocate resource for EISA slot 2
+[    1.680835] GPT:4612095 != 209715199
+[    1.680836] GPT:Alternate GPT header not at the end of the disk.
+[    1.681602] platform eisa.0: Cannot allocate resource for EISA slot 3
+[    1.681603] platform eisa.0: Cannot allocate resource for EISA slot 4
+[    1.681603] platform eisa.0: Cannot allocate resource for EISA slot 5
+[    1.681604] platform eisa.0: Cannot allocate resource for EISA slot 6
+[    1.681605] platform eisa.0: Cannot allocate resource for EISA slot 7
+[    1.681605] platform eisa.0: Cannot allocate resource for EISA slot 8
+[    1.681606] platform eisa.0: EISA: Detected 0 cards
+[    1.681610] intel_pstate: CPU model not supported
+[    1.688132] GPT:4612095 != 209715199
+[    1.688497] GPT: Use GNU Parted to correct GPT errors.
+[    1.689021]  sda: sda1 sda14 sda15
+[    1.689710] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.690407] EFI Variables Facility v0.08 2004-May-17
+[    1.695257] drop_monitor: Initializing network drop monitor service
+[    1.696688] NET: Registered protocol family 10
+[    1.700851] Segment Routing with IPv6
+[    1.701315] NET: Registered protocol family 17
+[    1.701916] Key type dns_resolver registered
+[    1.703203] RAS: Correctable Errors collector initialized.
+[    1.703745] IPI shorthand broadcast: enabled
+[    1.704201] sched_clock: Marking stable (1573773664, 129387131)->(1703548636, -387841)
+[    1.705132] registered taskstats version 1
+[    1.705574] Loading compiled-in X.509 certificates
+[    1.706702] Loaded X.509 cert 'Build time autogenerated kernel key: ea100a5e6a4f1b5b5f64d1b3d2c51c2a10b81145'
+[    1.708194] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    1.709614] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    1.710590] blacklist: Loading compiled-in revocation X.509 certificates
+[    1.711235] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    1.712261] zswap: loaded using pool lzo/zbud
+[    1.712896] Key type ._fscrypt registered
+[    1.713350] Key type .fscrypt registered
+[    1.713794] sd 0:0:1:0: [sda] Attached SCSI disk
+[    1.717116] Key type big_key registered
+[    1.717536] Key type trusted registered
+[    1.719324] Key type encrypted registered
+[    1.719749] AppArmor: AppArmor sha1 policy hashing enabled
+[    1.720692] integrity: Loading X.509 certificate: UEFI:db
+[    1.721249] integrity: Loaded X.509 cert 'Microsoft Corporation UEFI CA 2011: 13adbf4309bd82709c8cd54f316ed522988a1bd4'
+[    1.722352] integrity: Loading X.509 certificate: UEFI:db
+[    1.722887] integrity: Loaded X.509 cert 'Microsoft Windows Production PCA 2011: a92902398e16c49778cd90f99e4f9ae17c55af53'
+[    1.724333] integrity: Loading X.509 certificate: UEFI:MokListRT (MOKvar table)
+[    1.725485] integrity: Loaded X.509 cert 'Canonical Ltd. Master Certificate Authority: ad91990bc22ab1f517048c23b6655a268e345a63'
+[    1.726610] ima: Allocated hash algorithm: sha1
+[    1.757447] ima: No architecture policies found
+[    1.757967] evm: Initialising EVM extended attributes:
+[    1.758457] evm: security.selinux
+[    1.758872] evm: security.SMACK64
+[    1.759223] evm: security.SMACK64EXEC
+[    1.759593] evm: security.SMACK64TRANSMUTE
+[    1.760006] evm: security.SMACK64MMAP
+[    1.760413] evm: security.apparmor
+[    1.760801] evm: security.ima
+[    1.761121] evm: security.capability
+[    1.761532] evm: HMAC attrs: 0x1
+[    1.762115] PM:   Magic number: 14:914:67
+[    1.762526] PM:   hash matches /build/linux-gcp-5.4-QAgxAw/linux-gcp-5.4-5.4.0/drivers/base/power/main.c:644
+[    1.763508] memory memory228: hash matches
+[    1.763949] memory memory95: hash matches
+[    1.764505] rtc_cmos 00:00: setting system clock to 2022-11-07T08:03:57 UTC (1667808237)
+[    1.767781] Freeing unused decrypted memory: 2040K
+[    1.769447] Freeing unused kernel image memory: 2748K
+[    1.797316] Write protecting the kernel read-only data: 26624k
+[    1.798949] Freeing unused kernel image memory: 2036K
+[    1.799985] Freeing unused kernel image memory: 644K
+[    1.807351] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    1.808256] Run /init as init process
+[    1.870707] piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+[    1.873622] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    1.886664] cryptd: max_cpu_qlen set to 1000
+[    1.914875] AVX2 version of gcm_enc/dec engaged.
+[    1.921246] AES CTR mode by8 optimization enabled
+[    1.975835] virtio_net virtio1 ens4: renamed from eth0
+[    2.730592] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+[    3.157301] raid6: avx512x4 gen() 33039 MB/s
+[    3.205301] raid6: avx512x4 xor() 19566 MB/s
+[    3.253299] raid6: avx512x2 gen() 31454 MB/s
+[    3.301297] raid6: avx512x2 xor() 19574 MB/s
+[    3.349298] raid6: avx512x1 gen() 27206 MB/s
+[    3.397347] raid6: avx512x1 xor() 15564 MB/s
+[    3.445317] raid6: avx2x4   gen() 23708 MB/s
+[    3.493300] raid6: avx2x4   xor() 16290 MB/s
+[    3.541325] raid6: avx2x2   gen() 24644 MB/s
+[    3.593303] raid6: avx2x2   xor() 15701 MB/s
+[    3.645301] raid6: avx2x1   gen() 18303 MB/s
+[    3.697302] raid6: avx2x1   xor() 14306 MB/s
+[    3.749310] raid6: sse2x4   gen() 10044 MB/s
+[    3.801314] raid6: sse2x4   xor()  6411 MB/s
+[    3.853309] raid6: sse2x2   gen()  9479 MB/s
+[    3.905300] raid6: sse2x2   xor()  5992 MB/s
+[    3.957303] raid6: sse2x1   gen()  8365 MB/s
+[    4.009300] raid6: sse2x1   xor()  4868 MB/s
+[    4.013695] raid6: using algorithm avx512x4 gen() 33039 MB/s
+[    4.019466] raid6: .... xor() 19566 MB/s, rmw enabled
+[    4.024679] raid6: using avx512x2 recovery algorithm
+[    4.030666] xor: automatically using best checksumming function   avx       
+[    4.038659] async_tx: api initialized (async)
+[    4.081926] Btrfs loaded, crc32c=crc32c-intel
+[    4.149639] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[    4.538418] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    4.559989] systemd[1]: Detected virtualization kvm.
+[    4.565078] systemd[1]: Detected architecture x86-64.
+[    4.602014] systemd[1]: Set hostname to <ubuntu>.
+[    4.611681] systemd[1]: Initializing machine ID from KVM UUID.
+[    4.617717] systemd[1]: Installed transient /etc/machine-id file.
+[    4.848030] systemd[1]: Created slice System Slice.
+[    4.869588] systemd[1]: Listening on Syslog Socket.
+[    4.889565] systemd[1]: Listening on Network Service Netlink Socket.
+[    4.913513] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[    5.077472] Loading iSCSI transport class v2.0-870.
+[    5.091155] iscsi: registered transport (tcp)
+[    5.119620] iscsi: registered transport (iser)
+[    5.391140] EXT4-fs (sda1): re-mounted. Opts: (null)
+[    5.821834] systemd-journald[493]: Received request to flush runtime journal from PID 1
+[    5.971639] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    6.528114] audit: type=1400 audit(1667808242.260:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/lxc-start" pid=662 comm="apparmor_parser"
+[    6.596646] audit: type=1400 audit(1667808242.328:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=665 comm="apparmor_parser"
+[    6.597008] audit: type=1400 audit(1667808242.328:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=665 comm="apparmor_parser"
+[    6.597470] audit: type=1400 audit(1667808242.332:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=665 comm="apparmor_parser"
+[    6.617393] audit: type=1400 audit(1667808242.352:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=658 comm="apparmor_parser"
+[    6.623916] audit: type=1400 audit(1667808242.356:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/chronyd" pid=664 comm="apparmor_parser"
+[    6.687475] audit: type=1400 audit(1667808242.420:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=661 comm="apparmor_parser"
+[    6.687901] audit: type=1400 audit(1667808242.420:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=661 comm="apparmor_parser"
+[    6.688274] audit: type=1400 audit(1667808242.420:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=661 comm="apparmor_parser"
+[    6.688641] audit: type=1400 audit(1667808242.420:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=661 comm="apparmor_parser"
+[   10.855865] EXT4-fs (sda1): resizing filesystem from 548091 to 26185979 blocks
+[   11.046021] EXT4-fs (sda1): resized filesystem to 26185979
+[   12.203883] new mount options do not match the existing superblock, will be ignored
+[   12.268719] bpfilter: Loaded bpfilter_umh pid 1017
+[   12.268974] Started bpfilter
+[   21.144417] kauditd_printk_skb: 6 callbacks suppressed
+[   21.144418] audit: type=1400 audit(1667808256.873:18): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/snapd/17029/usr/lib/snapd/snap-confine" pid=2009 comm="apparmor_parser"
+[   21.144654] audit: type=1400 audit(1667808256.873:19): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/snapd/17029/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=2009 comm="apparmor_parser"
+[   23.301082] audit: type=1400 audit(1667808258.926:20): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/snapd/17029/usr/lib/snapd/snap-confine" pid=2304 comm="apparmor_parser"
+[   23.335467] audit: type=1400 audit(1667808258.959:21): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/snapd/17029/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=2304 comm="apparmor_parser"
+[   25.450305] fbcon: Taking over console
+[   26.252155] audit: type=1400 audit(1667808261.659:22): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.google-cloud-cli.docker-credential-gcloud" pid=2643 comm="apparmor_parser"
+[   26.252192] audit: type=1400 audit(1667808261.659:23): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.google-cloud-cli.anthoscli" pid=2641 comm="apparmor_parser"
+[   26.252275] audit: type=1400 audit(1667808261.659:24): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.google-cloud-cli.bq" pid=2642 comm="apparmor_parser"
+[   26.252789] audit: type=1400 audit(1667808261.659:25): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.google-cloud-cli.gsutil" pid=2645 comm="apparmor_parser"
+[   26.252806] audit: type=1400 audit(1667808261.659:26): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.google-cloud-cli.kubectl" pid=2646 comm="apparmor_parser"
+[   26.252874] audit: type=1400 audit(1667808261.659:27): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.google-cloud-cli.gcloud" pid=2644 comm="apparmor_parser"
+[ 2678.507662] cmpe283_1: loading out-of-tree module taints kernel.
+[ 2678.507710] cmpe283_1: module verification failed: signature and/or required key missing - tainting kernel
+[ 2678.508372] CMPE 283 Assignment 1 Module Start
+[ 2678.508376] Pinbased Controls MSR: 0x3f00000016
+[ 2678.508377]   External Interrupt Exiting: Can set=Yes, Can clear=Yes
+[ 2678.508377]   NMI Exiting: Can set=Yes, Can clear=Yes
+[ 2678.508378]   Virtual NMIs: Can set=Yes, Can clear=Yes
+[ 2678.508378]   Activate VMX Preemption Timer: Can set=No, Can clear=Yes
+[ 2678.508379]   Process Posted Interrupts: Can set=No, Can clear=Yes
+[ 9462.440330] CMPE 283 Assignment 1 Module Exits
+[ 9468.320403] CMPE 283 Assignment 1 Module Start
+[ 9468.320406] Pinbased Controls MSR: 0x3f00000016
+[ 9468.320407]   External Interrupt Exiting: Can set=Yes, Can clear=Yes
+[ 9468.320408]   NMI Exiting: Can set=Yes, Can clear=Yes
+[ 9468.320408]   Virtual NMIs: Can set=Yes, Can clear=Yes
+[ 9468.320409]   Activate VMX Preemption Timer: Can set=No, Can clear=Yes
+[ 9468.320409]   Process Posted Interrupts: Can set=No, Can clear=Yes
+[ 9468.320411] Primary Processor based Controls MSR: 0xf7b9fffe0401e172
+[ 9468.320412]   Interrupt-window Exiting: Can set=Yes, Can clear=Yes
+[ 9468.320412]   Use TSC Offsetting: Can set=Yes, Can clear=Yes
+[ 9468.320413]   HLT exiting: Can set=Yes, Can clear=Yes
+[ 9468.320413]   INVLPG exiting: Can set=Yes, Can clear=Yes
+[ 9468.320413]   MWAIT exiting: Can set=Yes, Can clear=Yes
+[ 9468.320414]   RDPMC exiting: Can set=Yes, Can clear=Yes
+[ 9468.320414]   RDTSC exiting: Can set=Yes, Can clear=Yes
+[ 9468.320415]   CR3-load exiting: Can set=Yes, Can clear=No
+[ 9468.320415]   CR3-store exiting: Can set=Yes, Can clear=No
+[ 9468.320416]   CR8-load exiting: Can set=Yes, Can clear=Yes
+[ 9468.320416]   CR8-store exiting: Can set=Yes, Can clear=Yes
+[ 9468.320417]   Use TPR shadow: Can set=Yes, Can clear=Yes
+[ 9468.320417]   NMI-window exiting: Can set=No, Can clear=Yes
+[ 9468.320418]   MOV-DR exiting: Can set=Yes, Can clear=Yes
+[ 9468.320418]   Unconditional I/O exiting: Can set=Yes, Can clear=Yes
+[ 9468.320419]   Use I/O bitmaps: Can set=Yes, Can clear=Yes
+[ 9468.320419]   Monitor trap flag: Can set=No, Can clear=Yes
+[ 9468.320420]   Use MSR bitmaps: Can set=Yes, Can clear=Yes
+[ 9468.320420]   MONITOR exiting: Can set=Yes, Can clear=Yes
+[ 9468.320421]   PAUSE exiting: Can set=Yes, Can clear=Yes
+[ 9468.320421]   Activate secondary controls: Can set=Yes, Can clear=Yes
+[ 9468.320423] Secondary Processor based: 0x51ff00000000
+[ 9468.320423]   Virtualize APIC accesses: Can set=Yes, Can clear=Yes
+[ 9468.320424]   Enable EPT: Can set=Yes, Can clear=Yes
+[ 9468.320424]   Descriptor-table exiting: Can set=Yes, Can clear=Yes
+[ 9468.320425]   Enable RDTSCP: Can set=Yes, Can clear=Yes
+[ 9468.320425]   Virtualize x2APIC mode: Can set=Yes, Can clear=Yes
+[ 9468.320426]   Enable VPID: Can set=Yes, Can clear=Yes
+[ 9468.320426]   WBINVD exiting: Can set=Yes, Can clear=Yes
+[ 9468.320427]   Unrestricted guest: Can set=Yes, Can clear=Yes
+[ 9468.320427]   APIC-register virtualization: Can set=Yes, Can clear=Yes
+[ 9468.320428]   Virtual-interrupt delivery: Can set=No, Can clear=Yes
+[ 9468.320428]   Pause-loop exiting: Can set=No, Can clear=Yes
+[ 9468.320429]   RDRAND exiting: Can set=No, Can clear=Yes
+[ 9468.320429]   Enable INVPCID: Can set=Yes, Can clear=Yes
+[ 9468.320430]   Enable VM functions: Can set=No, Can clear=Yes
+[ 9468.320430]   VMCS shadowing: Can set=Yes, Can clear=Yes
+[ 9468.320431]   Enable ENCLS exiting: Can set=No, Can clear=Yes
+[ 9468.320431]   RDSEED exiting: Can set=No, Can clear=Yes
+[ 9468.320432]   Enable PML: Can set=No, Can clear=Yes
+[ 9468.320432]   EPT-violation #VE: Can set=No, Can clear=Yes
+[ 9468.320433]   Conceal VMX non root operation from Intel PT: Can set=No, Can clear=Yes
+[ 9468.320433]   Enable XSAVES/XRSTORS: Can set=No, Can clear=Yes
+[ 9468.320434]   Mode-based execute control for EPT.: Can set=No, Can clear=Yes
+[ 9468.320434]   Use TSC scaling: Can set=No, Can clear=Yes
+[ 9468.320436] Exit Controls MSR: 0x3fefff00036dff
+[ 9468.320436]   Save debug controls: Can set=Yes, Can clear=No
+[ 9468.320437]   Host address space size: Can set=Yes, Can clear=Yes
+[ 9468.320437]   Load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[ 9468.320438]   Acknowledge Interrupt on exit: Can set=Yes, Can clear=Yes
+[ 9468.320438]   Save IA32_PAT: Can set=Yes, Can clear=Yes
+[ 9468.320439]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[ 9468.320439]   Save IA32_EFER: Can set=Yes, Can clear=Yes
+[ 9468.320440]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[ 9468.320440]   Save VMX-preemption timer value: Can set=No, Can clear=Yes
+[ 9468.320441]   Clear IA32_BNDCFGS: Can set=No, Can clear=Yes
+[ 9468.320441]   Conceal VM exits from Intel PT: Can set=No, Can clear=Yes
+[ 9468.320443] Entry Controls MSR: 0xd3ff000011ff
+[ 9468.320443]   Load debug controls: Can set=Yes, Can clear=No
+[ 9468.320444]   IA-32e mode guest: Can set=Yes, Can clear=Yes
+[ 9468.320444]   Entry to SMM: Can set=No, Can clear=Yes
+[ 9468.320445]   Deactivate dual-monito treatment: Can set=No, Can clear=Yes
+[ 9468.320445]   load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[ 9468.320445]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[ 9468.320446]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[ 9468.320446]   Load IA32_BNDCFGS: Can set=No, Can clear=Yes
+[ 9468.320447]   Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
+[ 9468.320563] unchecked MSR access error: RDMSR from 0x492 at rIP: 0xffffffff8b47892a (native_read_msr+0xa/0x30)
+[ 9468.320563] Call Trace:
+[ 9468.320568]  detect_vmx_features+0x12c/0x160 [cmpe283_1]
+[ 9468.320570]  init_module+0x1a/0x20 [cmpe283_1]
+[ 9468.320573]  do_one_initcall+0x4a/0x200
+[ 9468.320577]  ? _cond_resched+0x19/0x40
+[ 9468.320581]  ? kmem_cache_alloc_trace+0x170/0x230
+[ 9468.320583]  do_init_module+0x4f/0x20f
+[ 9468.320585]  load_module+0x1c9b/0x22d0
+[ 9468.320587]  __do_sys_finit_module+0xfc/0x120
+[ 9468.320588]  ? __do_sys_finit_module+0xfc/0x120
+[ 9468.320590]  __x64_sys_finit_module+0x1a/0x20
+[ 9468.320592]  do_syscall_64+0x57/0x190
+[ 9468.320593]  entry_SYSCALL_64_after_hwframe+0x44/0xa9
+[ 9468.320595] RIP: 0033:0x7f1a86725539
+[ 9468.320596] Code: 00 f3 c3 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d 1f f9 2c 00 f7 d8 64 89 01 48
+[ 9468.320597] RSP: 002b:00007ffe4bbea4a8 EFLAGS: 00000246 ORIG_RAX: 0000000000000139
+[ 9468.320598] RAX: ffffffffffffffda RBX: 0000558eacb1d790 RCX: 00007f1a86725539
+[ 9468.320598] RDX: 0000000000000000 RSI: 0000558eab181cee RDI: 0000000000000003
+[ 9468.320599] RBP: 0000558eab181cee R08: 0000000000000000 R09: 00007f1a869f8000
+[ 9468.320600] R10: 0000000000000003 R11: 0000000000000246 R12: 0000000000000000
+[ 9468.320600] R13: 0000558eacb1d760 R14: 0000000000000000 R15: 0000000000000000
+[ 9468.320602] Teritary Processor based MSR: 0x0
+[ 9468.320602]   LOADIWKEY exiting: Can set=No, Can clear=Yes
+[ 9468.320603]   Enable HLAT: Can set=No, Can clear=Yes
+[ 9468.320603]   EPT paging-write control: Can set=No, Can clear=Yes
+[ 9468.320604]   Guest-paging verification: Can set=No, Can clear=Yes
+[ 9668.653281] CMPE 283 Assignment 1 Module Exits
+[ 9680.704952] CMPE 283 Assignment 1 Module Start
+[ 9680.704956] Pinbased Controls MSR: 0x3f00000016
+[ 9680.704957]   External Interrupt Exiting: Can set=Yes, Can clear=Yes
+[ 9680.704957]   NMI Exiting: Can set=Yes, Can clear=Yes
+[ 9680.704958]   Virtual NMIs: Can set=Yes, Can clear=Yes
+[ 9680.704958]   Activate VMX Preemption Timer: Can set=No, Can clear=Yes
+[ 9680.704959]   Process Posted Interrupts: Can set=No, Can clear=Yes
+[ 9680.704961] Primary Processor based Controls MSR: 0xf7b9fffe0401e172
+[ 9680.704962]   Interrupt-window Exiting: Can set=Yes, Can clear=Yes
+[ 9680.704963]   Use TSC Offsetting: Can set=Yes, Can clear=Yes
+[ 9680.704963]   HLT exiting: Can set=Yes, Can clear=Yes
+[ 9680.704964]   INVLPG exiting: Can set=Yes, Can clear=Yes
+[ 9680.704964]   MWAIT exiting: Can set=Yes, Can clear=Yes
+[ 9680.704965]   RDPMC exiting: Can set=Yes, Can clear=Yes
+[ 9680.704965]   RDTSC exiting: Can set=Yes, Can clear=Yes
+[ 9680.704966]   CR3-load exiting: Can set=Yes, Can clear=No
+[ 9680.704966]   CR3-store exiting: Can set=Yes, Can clear=No
+[ 9680.704967]   CR8-load exiting: Can set=Yes, Can clear=Yes
+[ 9680.704967]   CR8-store exiting: Can set=Yes, Can clear=Yes
+[ 9680.704968]   Use TPR shadow: Can set=Yes, Can clear=Yes
+[ 9680.704968]   NMI-window exiting: Can set=No, Can clear=Yes
+[ 9680.704969]   MOV-DR exiting: Can set=Yes, Can clear=Yes
+[ 9680.704969]   Unconditional I/O exiting: Can set=Yes, Can clear=Yes
+[ 9680.704970]   Use I/O bitmaps: Can set=Yes, Can clear=Yes
+[ 9680.704970]   Monitor trap flag: Can set=No, Can clear=Yes
+[ 9680.704971]   Use MSR bitmaps: Can set=Yes, Can clear=Yes
+[ 9680.704971]   MONITOR exiting: Can set=Yes, Can clear=Yes
+[ 9680.704971]   PAUSE exiting: Can set=Yes, Can clear=Yes
+[ 9680.704972]   Activate secondary controls: Can set=Yes, Can clear=Yes
+[ 9680.704974] Secondary Processor based: 0x51ff00000000
+[ 9680.704974]   Virtualize APIC accesses: Can set=Yes, Can clear=Yes
+[ 9680.704975]   Enable EPT: Can set=Yes, Can clear=Yes
+[ 9680.704975]   Descriptor-table exiting: Can set=Yes, Can clear=Yes
+[ 9680.704976]   Enable RDTSCP: Can set=Yes, Can clear=Yes
+[ 9680.704976]   Virtualize x2APIC mode: Can set=Yes, Can clear=Yes
+[ 9680.704977]   Enable VPID: Can set=Yes, Can clear=Yes
+[ 9680.704977]   WBINVD exiting: Can set=Yes, Can clear=Yes
+[ 9680.704977]   Unrestricted guest: Can set=Yes, Can clear=Yes
+[ 9680.704978]   APIC-register virtualization: Can set=Yes, Can clear=Yes
+[ 9680.704978]   Virtual-interrupt delivery: Can set=No, Can clear=Yes
+[ 9680.704979]   Pause-loop exiting: Can set=No, Can clear=Yes
+[ 9680.704979]   RDRAND exiting: Can set=No, Can clear=Yes
+[ 9680.704980]   Enable INVPCID: Can set=Yes, Can clear=Yes
+[ 9680.704980]   Enable VM functions: Can set=No, Can clear=Yes
+[ 9680.704981]   VMCS shadowing: Can set=Yes, Can clear=Yes
+[ 9680.704981]   Enable ENCLS exiting: Can set=No, Can clear=Yes
+[ 9680.704982]   RDSEED exiting: Can set=No, Can clear=Yes
+[ 9680.704982]   Enable PML: Can set=No, Can clear=Yes
+[ 9680.704983]   EPT-violation #VE: Can set=No, Can clear=Yes
+[ 9680.704983]   Conceal VMX non root operation from Intel PT: Can set=No, Can clear=Yes
+[ 9680.704984]   Enable XSAVES/XRSTORS: Can set=No, Can clear=Yes
+[ 9680.704984]   Mode-based execute control for EPT.: Can set=No, Can clear=Yes
+[ 9680.704985]   Use TSC scaling: Can set=No, Can clear=Yes
+[ 9680.705091] Teritary Processor based MSR: 0x0
+[ 9680.705092]   LOADIWKEY exiting: Can set=No, Can clear=Yes
+[ 9680.705092]   Enable HLAT: Can set=No, Can clear=Yes
+[ 9680.705093]   EPT paging-write control: Can set=No, Can clear=Yes
+[ 9680.705093]   Guest-paging verification: Can set=No, Can clear=Yes
+[ 9680.705095] Exit Controls MSR: 0x3fefff00036dff
+[ 9680.705096]   Save debug controls: Can set=Yes, Can clear=No
+[ 9680.705096]   Host address space size: Can set=Yes, Can clear=Yes
+[ 9680.705097]   Load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[ 9680.705097]   Acknowledge Interrupt on exit: Can set=Yes, Can clear=Yes
+[ 9680.705098]   Save IA32_PAT: Can set=Yes, Can clear=Yes
+[ 9680.705098]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[ 9680.705099]   Save IA32_EFER: Can set=Yes, Can clear=Yes
+[ 9680.705099]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[ 9680.705100]   Save VMX-preemption timer value: Can set=No, Can clear=Yes
+[ 9680.705100]   Clear IA32_BNDCFGS: Can set=No, Can clear=Yes
+[ 9680.705101]   Conceal VM exits from Intel PT: Can set=No, Can clear=Yes
+[ 9680.705102] Entry Controls MSR: 0xd3ff000011ff
+[ 9680.705103]   Load debug controls: Can set=Yes, Can clear=No
+[ 9680.705103]   IA-32e mode guest: Can set=Yes, Can clear=Yes
+[ 9680.705104]   Entry to SMM: Can set=No, Can clear=Yes
+[ 9680.705104]   Deactivate dual-monito treatment: Can set=No, Can clear=Yes
+[ 9680.705105]   load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[ 9680.705105]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[ 9680.705106]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[ 9680.705106]   Load IA32_BNDCFGS: Can set=No, Can clear=Yes
+[ 9680.705107]   Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
+[11573.862483] CMPE 283 Assignment 1 Module Exits
+[11579.796955] CMPE 283 Assignment 1 Module Start
+[11579.796958] Pinbased Controls MSR: 0x3f00000016
+[11579.796959]   External Interrupt Exiting: Can set=Yes, Can clear=Yes
+[11579.796960]   NMI Exiting: Can set=Yes, Can clear=Yes
+[11579.796960]   Virtual NMIs: Can set=Yes, Can clear=Yes
+[11579.796961]   Activate VMX Preemption Timer: Can set=No, Can clear=Yes
+[11579.796961]   Process Posted Interrupts: Can set=No, Can clear=Yes
+[11579.796963] Primary Processor based Controls MSR: 0xf7b9fffe0401e172
+[11579.796964]   Interrupt-window Exiting: Can set=Yes, Can clear=Yes
+[11579.796964]   Use TSC Offsetting: Can set=Yes, Can clear=Yes
+[11579.796965]   HLT exiting: Can set=Yes, Can clear=Yes
+[11579.796965]   INVLPG exiting: Can set=Yes, Can clear=Yes
+[11579.796966]   MWAIT exiting: Can set=Yes, Can clear=Yes
+[11579.796966]   RDPMC exiting: Can set=Yes, Can clear=Yes
+[11579.796966]   RDTSC exiting: Can set=Yes, Can clear=Yes
+[11579.796967]   CR3-load exiting: Can set=Yes, Can clear=No
+[11579.796968]   CR3-store exiting: Can set=Yes, Can clear=No
+[11579.796968]   CR8-load exiting: Can set=Yes, Can clear=Yes
+[11579.796968]   CR8-store exiting: Can set=Yes, Can clear=Yes
+[11579.796969]   Use TPR shadow: Can set=Yes, Can clear=Yes
+[11579.796969]   NMI-window exiting: Can set=No, Can clear=Yes
+[11579.796970]   MOV-DR exiting: Can set=Yes, Can clear=Yes
+[11579.796970]   Unconditional I/O exiting: Can set=Yes, Can clear=Yes
+[11579.796971]   Use I/O bitmaps: Can set=Yes, Can clear=Yes
+[11579.796971]   Monitor trap flag: Can set=No, Can clear=Yes
+[11579.796972]   Use MSR bitmaps: Can set=Yes, Can clear=Yes
+[11579.796972]   MONITOR exiting: Can set=Yes, Can clear=Yes
+[11579.796973]   PAUSE exiting: Can set=Yes, Can clear=Yes
+[11579.796973]   Activate secondary controls: Can set=Yes, Can clear=Yes
+[11579.796975] Secondary Processor based: 0x51ff00000000
+[11579.796975]   Virtualize APIC accesses: Can set=Yes, Can clear=Yes
+[11579.796976]   Enable EPT: Can set=Yes, Can clear=Yes
+[11579.796976]   Descriptor-table exiting: Can set=Yes, Can clear=Yes
+[11579.796977]   Enable RDTSCP: Can set=Yes, Can clear=Yes
+[11579.796977]   Virtualize x2APIC mode: Can set=Yes, Can clear=Yes
+[11579.796978]   Enable VPID: Can set=Yes, Can clear=Yes
+[11579.796979]   WBINVD exiting: Can set=Yes, Can clear=Yes
+[11579.796979]   Unrestricted guest: Can set=Yes, Can clear=Yes
+[11579.796980]   APIC-register virtualization: Can set=Yes, Can clear=Yes
+[11579.796980]   Virtual-interrupt delivery: Can set=No, Can clear=Yes
+[11579.796981]   Pause-loop exiting: Can set=No, Can clear=Yes
+[11579.796981]   RDRAND exiting: Can set=No, Can clear=Yes
+[11579.796982]   Enable INVPCID: Can set=Yes, Can clear=Yes
+[11579.796982]   Enable VM functions: Can set=No, Can clear=Yes
+[11579.796983]   VMCS shadowing: Can set=Yes, Can clear=Yes
+[11579.796983]   Enable ENCLS exiting: Can set=No, Can clear=Yes
+[11579.796984]   RDSEED exiting: Can set=No, Can clear=Yes
+[11579.796984]   Enable PML: Can set=No, Can clear=Yes
+[11579.796985]   EPT-violation #VE: Can set=No, Can clear=Yes
+[11579.796985]   Conceal VMX non root operation from Intel PT: Can set=No, Can clear=Yes
+[11579.796986]   Enable XSAVES/XRSTORS: Can set=No, Can clear=Yes
+[11579.796986]   Mode-based execute control for EPT.: Can set=No, Can clear=Yes
+[11579.796987]   Use TSC scaling: Can set=No, Can clear=Yes
+[11579.797085] Teritary Processor based MSR: 0x0
+[11579.797086]   LOADIWKEY exiting: Can set=No, Can clear=Yes
+[11579.797086]   Enable HLAT: Can set=No, Can clear=Yes
+[11579.797087]   EPT paging-write control: Can set=No, Can clear=Yes
+[11579.797087]   Guest-paging verification: Can set=No, Can clear=Yes
+[11579.797089] Exit Controls MSR: 0x3fefff00036dff
+[11579.797090]   Save debug controls: Can set=Yes, Can clear=No
+[11579.797090]   Host address space size: Can set=Yes, Can clear=Yes
+[11579.797091]   Load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[11579.797091]   Acknowledge Interrupt on exit: Can set=Yes, Can clear=Yes
+[11579.797092]   Save IA32_PAT: Can set=Yes, Can clear=Yes
+[11579.797092]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[11579.797093]   Save IA32_EFER: Can set=Yes, Can clear=Yes
+[11579.797093]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[11579.797094]   Save VMX-preemption timer value: Can set=No, Can clear=Yes
+[11579.797094]   Clear IA32_BNDCFGS: Can set=No, Can clear=Yes
+[11579.797095]   Conceal VM exits from Intel PT: Can set=No, Can clear=Yes
+[11579.797096] Entry Controls MSR: 0xd3ff000011ff
+[11579.797097]   Load debug controls: Can set=Yes, Can clear=No
+[11579.797097]   IA-32e mode guest: Can set=Yes, Can clear=Yes
+[11579.797098]   Entry to SMM: Can set=No, Can clear=Yes
+[11579.797098]   Deactivate dual-monito treatment: Can set=No, Can clear=Yes
+[11579.797099]   load IA32_PERF_GLOBAL_CTRL: Can set=No, Can clear=Yes
+[11579.797099]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[11579.797100]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[11579.797100]   Load IA32_BNDCFGS: Can set=No, Can clear=Yes
+[11579.797101]   Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
